@@ -1,0 +1,30 @@
+{
+  "name": "gulptemplate",
+  "version": "1.0.0",
+  "description": "//To start project gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ZhannaSydorovych",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "cssnano": "^4.1.10",
+    "gulp-cssnano": "^2.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaneVanilla/sketchTest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JaneVanilla/sketchTest/issues"
+  },
+  "homepage": "https://github.com/JaneVanilla/sketchTest#readme"
+}

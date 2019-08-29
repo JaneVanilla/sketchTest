@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="330px" viewBox="0 0 320 330" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>slider</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Mockup" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PHONE" transform="translate(0.000000, -150.000000)">
+            <g id="slider" transform="translate(0.000000, 150.000000)">
+                <rect id="Rectangle" fill="#E1E0FE" x="0" y="0" width="320" height="330"></rect>
+                <g id="dots" transform="translate(116.000000, 302.000000)">
+                    <circle id="Oval" fill="#979797" cx="24" cy="4" r="4"></circle>
+                    <circle id="Oval-Copy-4" fill="#212212" cx="4" cy="4" r="4"></circle>
+                    <circle id="Oval-Copy-2" fill="#979797" cx="64" cy="4" r="4"></circle>
+                    <circle id="Oval-Copy" fill="#979797" cx="44" cy="4" r="4"></circle>
+                    <circle id="Oval-Copy-3" fill="#979797" cx="84" cy="4" r="4"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

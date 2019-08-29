@@ -1,0 +1,790 @@
+/**fonts**/
+@font-face {
+  font-family: 'AvenirNextCyr-Regular';
+  src: url('../fonts/AvenirNext/AvenirNextCyr-Regular.eot');
+  src: url('../fonts/AvenirNext/AvenirNextCyr-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/AvenirNext/AvenirNextCyr-Regular.woff') format('woff'), url('../fonts/AvenirNext/AvenirNextCyr-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+/**variables**/
+$main-font: 'Roboto', sans-serif;
+$avenirRegular-font: 'AvenirNextCyr-Regular';
+$textColor: #212212;
+$plum: plum;
+$yellowgreen: yellowgreen;
+$deeppink: deeppink;
+$rebeccapurple: rebeccapurple;
+$gold: gold;
+
+/**mixins**/
+@mixin font-light {
+  font-family: $main-font;
+  font-weight: 300;
+}
+@mixin font-regular {
+  font-family: $main-font;
+  font-weight: 400;
+}
+@mixin font-medium {
+  font-family: $main-font;
+  font-weight: 500;
+}
+@mixin font-bold {
+  font-family: $main-font;
+  font-weight: 700;
+}
+@mixin customDots {
+  .slick-dots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+  }
+  .slick-dots {
+    background: none;
+    border-radius: 50%;
+  }
+  .slick-dots button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    margin: 0 6px;
+    border-radius: 50%;
+    font-size: 0;
+    color: #979797;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .slick-dots .slick-active button {
+    background: $textColor;
+  }
+}
+
+@mixin textStyle {
+  font-size: 14px;
+  line-height: 24px;
+  color: $textColor;
+}
+
+
+/**common styles**/
+body {
+  margin: 0;
+}
+h1, h2, h3 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+
+/**********Header**************/
+.page-header {
+  &__wrapper {
+    position: relative;
+  }
+  &__top-line {
+    padding: 20px 0;
+  }
+  &__logo {
+    display: block;
+    width: 268px;
+    margin: 0 auto;
+  }
+  &__phone {
+    display: none;
+  }
+  &__user-block {
+    display: flex;
+    position: absolute;
+    bottom: 11px;
+    right: 0;
+  }
+  &__user-block li{
+    padding-right: 20px;
+  }
+  &__user-link {
+    display: block;
+    width: 28px;
+    height: 28px;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  &__user-link--search {
+    background: url("../images/header/search.svg")no-repeat center;
+  }
+  &__user-link--shape {
+    background: url("../images/header/Shape.svg") no-repeat center;
+  }
+  &__user-link--cart {
+    width: 32px;
+    background: url("../images/header/cart.svg") no-repeat center bottom;
+    background-size: contain;
+  }
+  &__bars {
+    width: 20px;
+    height: 16px;
+    margin-left: 20px;
+    cursor: pointer;
+    background: url("../images/header/bars.svg") no-repeat;
+    &:hover {
+      background: url("../images/header/barsHover.svg") no-repeat;
+    }
+  }
+  &__navigation {
+    position: relative;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+  }
+  &__navigation-list {
+    display: none;
+    position: absolute;
+    top: 46px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 2;
+  }
+  &__navigation-list li {
+    border-bottom: 1px solid rgba(102,51,153,0.4);
+
+    &:first-child {
+      border-top: 1px solid rgba(102,51,153,0.4);
+    }
+    &:hover {
+      background: rgba(102,51,153,0.1);
+    }
+  }
+  &__navigation-link {
+    display: block;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 42px;
+    color: $textColor;
+    font-family: $avenirRegular-font;
+  }
+  .show {
+    display: block;
+  }
+}
+/**********Header tablet*********/
+
+@media (min-width: 768px) {
+  .page-header {
+    &__top-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    &__phone {
+      display: block;
+      font-size: 17px;
+      line-height: 23px;
+      font-family: $avenirRegular-font;
+      color: $textColor;
+      &:hover {
+       color: rgba(102,51,153,0.9);
+      }
+    }
+    &__logo {
+      height: 60px;
+    }
+    &__user-block {
+      position: static;
+    }
+    &__user-block li{
+      padding-right: 25px;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    &__bars {
+      display: none;
+    }
+    &__navigation {
+      padding-top: 18px;
+      box-shadow: none;
+      border-top: 1px solid rgba(212,209,209,0.5);
+    }
+    &__navigation-list {
+      position: static;
+      display: flex;
+      justify-content: center;
+    }
+    &__navigation-list li {
+      padding-right: 22px;
+      border-bottom: none;
+      &:last-child {
+        padding-right: 0;
+      }
+      &:first-child {
+        border-top: none;
+      }
+      &:hover {
+        background: #fff;
+      }
+    }
+    &__navigation-link {
+      padding-left: 0;
+      line-height: 22px;
+
+      &:hover {
+        color: rgba(102,51,153,0.9);
+      }
+    }
+  }
+}
+/**********Header desktop*********/
+@media (min-width: 1450px) {
+  .page-header {
+
+    &__top-line {
+      max-width: 1410px;
+      padding: 30px 0;
+      margin: 0 auto;
+    }
+    &__navigation {
+      padding-top: 19.5px;
+      padding-bottom: 14px;
+    }
+    &__navigation-list li {
+      padding-right: 32px;
+    }
+  }
+}
+/**************END Header**************/
+
+
+/**************Banner*****************/
+.banner {
+  @include customDots;
+  height: 330px;
+  &__item {
+    width: 100%;
+    height: 330px;
+  }
+  .slick-slide {
+    height: 330px;
+  }
+  &__item--1 {
+    background: $plum;
+  }
+  &__item--2 {
+     background: $yellowgreen;
+   }
+  &__item--3 {
+    background: $deeppink;
+  }
+  &__item--4 {
+    background: $rebeccapurple;
+  }
+  &__item--5 {
+    background: $gold;
+  }
+}
+
+/**************Banner tablet*****************/
+@media (min-width: 768px) {
+  .banner {
+    height: 420px;
+    &__item {
+      width: 100%;
+      height: 420px;
+    }
+    .slick-slide {
+      height: 420px;
+    }
+  }
+}
+/**************Banner desktop*****************/
+
+@media (min-width: 1450px) {
+  .banner {
+    height: 540px;
+    &__item {
+      width: 100%;
+      height: 540px;
+    }
+    .slick-slide {
+      height: 540px;
+    }
+  }
+}
+/**************END Banner*****************/
+
+/************Custom-design**************/
+.custom-design {
+  &__text-block {
+    padding: 40px 15px;
+    text-align: center;
+    font-family: $avenirRegular-font;
+    color: $textColor;
+  }
+  &__title {
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    span {
+      color: #9E8B6B;
+    }
+  }
+  p {
+    margin-bottom: 19px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__button {
+    font-size: 14px;
+    line-height: 19px;
+    color: $textColor;
+    text-decoration: underline;
+    font-family: $avenirRegular-font;
+    &:hover {
+      font-weight: bold;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__list-item {
+    width: 100%;
+    height: 330px;
+    margin-bottom: 2px;
+    a {
+      display: block;
+      height: 100%;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__list-item--1 {
+    background: $plum;
+  }
+  &__list-item--2 {
+    background: $yellowgreen;
+  }
+  &__list-item--3 {
+    background: $deeppink;
+  }
+  &__list-item--4 {
+    background: $rebeccapurple;
+  }
+  &__list-item--5 {
+    background: $gold;
+  }
+}
+/************Custom-design tablet**************/
+@media (min-width: 768px) {
+  .custom-design {
+      &__text-block {
+        padding: 40px 47px;
+      }
+      p {
+        @include textStyle;
+        max-width: 768px;
+        margin-right: auto;
+        margin-left: auto;;
+      }
+
+    &__list {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &__list-item {
+      height: 360px;
+      margin-bottom: 6px;
+    }
+    &__list-item--1, &__list-item--2, &__list-item--3{
+      width: 32.8%;
+    }
+    &__list-item--4, &__list-item--5 {
+      width: 49.6%
+    }
+
+  }
+}
+/************Custom-design desktop**************/
+@media (min-width: 1450px) {
+  .custom-design {
+    &__wrapper {
+      max-width: 1410px;
+      margin: 0 auto;
+    }
+    &__text-block {
+      padding: 60px 240px;
+    }
+    &__list-item {
+      height: 558px;
+      margin-bottom: 7px;
+    }
+    &__list-item--1, &__list-item--2, &__list-item--3{
+      width: 465px;
+    }
+    &__list-item--4, &__list-item--5 {
+      width: 701px;
+    }
+  }
+}
+/************END Custom-design**************/
+
+/*****************Reviews******************/
+
+.reviews {
+  @include customDots;
+  max-width: 320px;
+  padding: 40px 15px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: $avenirRegular-font;
+  box-sizing: border-box;
+  .slick-dots {
+    margin-top: 0;
+  }
+  &__title {
+    margin-bottom: 13px;
+    color: #9E8B6B;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  p {
+    @include textStyle;
+    margin-bottom: 30px;
+  }
+}
+
+/*****************Reviews tablet******************/
+@media (min-width: 768px) {
+  .reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 768px;
+    padding: 40px 29px;
+    padding-top: 33px;
+    &__item {
+      max-width: 268px;
+      margin-bottom: 35px;
+    }
+    &__item--1 {
+      visibility: hidden;
+    }
+    &__item--3,
+    &__item--4 {
+      margin-bottom: 0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+/*****************Reviews desktop******************/
+@media (min-width: 1450px)  {
+  .reviews {
+    max-width: 1410px;
+    padding: 60px 38px;
+    padding-top: 53px;
+    &__item {
+      margin-bottom: 0;
+    }
+    &__item--1 {
+      visibility: visible;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+/*****************END Reviews******************/
+
+/*******************Footer********************/
+.page-footer {
+  font-family: $avenirRegular-font;
+  &__wrapper {
+    max-width: 320px;
+  }
+  &__services {
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border-top:1px solid #D4D1D1;
+    border-bottom:1px solid #D4D1D1;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-family: $avenirRegular-font;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &__text {
+    font-family: $avenirRegular-font;
+    font-size: 14px;
+    line-height: 26px;
+    color: $textColor;
+    font-weight: normal;
+  }
+  &__joinUs {
+    padding: 22px 15px;
+    border-bottom:1px solid #D4D1D1;
+    .page-footer__title {
+      font-weight: 400;
+    }
+    p {
+      @include textStyle;
+      line-height: 18px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__form-input {
+    width: 100%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 13px;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #D4D1D1;
+    border-radius: 3px;
+    outline: none;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: $avenirRegular-font;
+    color: #979797;
+    box-sizing: border-box;
+    &::placeholder {
+      font-size: 16px;
+      line-height: 22px;
+      font-family: $avenirRegular-font;
+      color: #979797;
+    }
+  }
+
+  .input-block {
+    position: relative;
+    display: flex;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 15px;
+
+    &__checkbox-name {
+      position: relative;
+      cursor: pointer;
+      &:before,&:after {
+        position: absolute;
+        left: -28px;
+        top: 3px;
+        content: "";
+        width: 18px;
+        height: 18px;
+        z-index: 2;
+      }
+      &:after {
+        border-radius: 2px;
+        border: 1px solid #D4D1D1;
+        box-sizing: border-box;
+      }
+      &:before {
+        background: url("../images/checked.svg") no-repeat center;
+        opacity: 0;
+      }
+    }
+    &__checkbox {
+      width: 18px;
+      height: 18px;
+      margin-right: 11px;
+      opacity: 0;
+      z-index: 1;
+    }
+  }
+  &__form-button {
+    width: 100%;
+    padding-top: 11px;
+    padding-bottom: 7px;
+    background: $textColor;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    border: 1px solid $textColor;
+    border-radius: 3px;
+    &:hover {
+      color: $textColor;
+      background: #fff;
+    }
+  }
+  input[type=checkbox]:checked ~ .input-block__checkbox-name:before {
+    opacity: 1;
+  }
+  &__company {
+    padding: 20.5px 15px 22px;
+    span {
+      display: block;
+    }
+  }
+  &__text2 {
+    margin-bottom: 15px;
+  }
+  &__text2,&__text3 {
+    color: #979797;
+  }
+  .visible-desktop {
+    display: none;
+  }
+}
+/*******************Footer tablet********************/
+@media (min-width: 768px) {
+  .page-footer {
+    position: relative;
+    padding-top: 19px;
+    border-top: 1px solid #D4D1D1;
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: 100px;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid #D4D1D1;
+    }
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      max-width: 768px;
+      margin: 0 auto;
+    }
+    &__wrapper {
+      max-width: unset;
+    }
+    &__services, &__joinUs {
+      padding-top: 0;
+      border: none;
+    }
+    &__services {
+      padding-left: 20px;
+      margin-right: 26px;
+    }
+    &__joinUs {
+      width: 500px;
+      padding: 0;
+      .page-footer__title {
+        font-weight: bold;
+      }
+      p {
+        margin-bottom: 15px;
+      }
+    }
+    &__text {
+      line-height: 26px;
+    }
+    &__form {
+      position: relative;
+    }
+    .input-block__checkbox-name {
+      &:before, &:after {
+        top:0;
+      }
+    }
+    &__form-input {
+      width: 346px;
+    }
+    &__form-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 167px;
+    }
+    &__company {
+      position: relative;
+      width: 100%;
+      padding-bottom: 27px;
+    }
+    &__text2 {
+      margin-bottom: 0;
+    }
+    &__text3 {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+}
+/*******************Footer desktop********************/
+@media (min-width: 1450px) {
+  .page-footer {
+    padding-top: 39.5px;
+    &:after {
+      bottom: 95px;
+    }
+    &__container {
+      max-width: 1410px;
+    }
+    &__wrapper--services {
+      display: flex;
+    }
+    &__services {
+      padding-bottom: 35.5px;
+    }
+    &__services-listSecond {
+      display: flex;
+      flex-wrap: wrap;
+      width: 470px;
+    }
+    &__services-listSecond li {
+      width: 185px;
+      margin-right: 50px
+    }
+    .visible-desktop {
+      display: block;
+      margin-right: 100px;
+    }
+    &__joinUs {
+      position: relative;
+      padding-left: 60px;
+      width: 530px
+    }
+    &__joinUs:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 1px;
+      height: 200px;
+      background: #D4D1D1;
+    }
+    &__form-input {
+      width: 382px;
+    }
+    &__form-button {
+      width: 148px;
+    }
+    &__company {
+      padding-bottom: 22px;
+    }
+  }
+}
+/*******************END Footer********************/
