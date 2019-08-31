@@ -630,8 +630,9 @@ img {
   }
   &__form-button {
     width: 100%;
-    padding-top: 11px;
+    padding-top: 7px;
     padding-bottom: 7px;
+    height: 38px;
     background: $textColor;
     color: #fff;
     text-transform: uppercase;
@@ -641,6 +642,7 @@ img {
     letter-spacing: 2px;
     border: 1px solid $textColor;
     border-radius: 3px;
+    box-sizing: border-box;
     &:hover {
       color: $textColor;
       background: #fff;
@@ -726,6 +728,7 @@ img {
       top: 0;
       right: 0;
       width: 167px;
+      box-sizing: border-box;
     }
     &__company {
       position: relative;

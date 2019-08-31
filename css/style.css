@@ -512,8 +512,9 @@ img {
       z-index: 1; }
   .page-footer__form-button {
     width: 100%;
-    padding-top: 11px;
+    padding-top: 7px;
     padding-bottom: 7px;
+    height: 38px;
     background: #212212;
     color: #fff;
     text-transform: uppercase;
@@ -522,7 +523,8 @@ img {
     line-height: 18px;
     letter-spacing: 2px;
     border: 1px solid #212212;
-    border-radius: 3px; }
+    border-radius: 3px;
+    box-sizing: border-box; }
     .page-footer__form-button:hover {
       color: #212212;
       background: #fff; }
@@ -585,7 +587,8 @@ img {
       position: absolute;
       top: 0;
       right: 0;
-      width: 167px; }
+      width: 167px;
+      box-sizing: border-box; }
     .page-footer__company {
       position: relative;
       width: 100%;
