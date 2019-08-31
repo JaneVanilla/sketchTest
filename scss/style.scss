@@ -630,10 +630,11 @@ img {
   }
   &__form-button {
     @include font-bold;
+    width: 100%;
     padding-top: 7px;
     padding-bottom: 7px;
     height: 38px;
-    background: $textColor!important;
+    background: $textColor;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
@@ -667,11 +668,7 @@ img {
     display: none;
   }
 }
-@media (min-width: 320px) and (max-width: 767.5px) {
-  .page-footer__form-button {
-    width: 100%;
-  }
-}
+
 /*******************Footer tablet********************/
 @media (min-width: 768px) {
   .page-footer {
@@ -730,6 +727,7 @@ img {
     }
     &__form-button {
       position: absolute;
+      width: 167px;
       top: 0;
       right: 0;
       box-sizing: border-box;
@@ -749,11 +747,7 @@ img {
     }
   }
 }
-@media (min-width: 768px) and (max-width: 1449.5px) {
-  .page-footer__form-button {
-    width: 167px;
-  }
-}
+
 /*******************Footer desktop********************/
 @media (min-width: 1450px) {
   .page-footer {
