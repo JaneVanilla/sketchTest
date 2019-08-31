@@ -35,12 +35,10 @@ $gold: gold;
 }
 @mixin customDots {
   .slick-dots {
-    position: relative;
     display: flex;
     justify-content: center;
-    margin-top: -40px;
-  }
-  .slick-dots {
+    position: absolute;
+    bottom: 40px;
     background: none;
     border-radius: 50%;
   }
@@ -56,8 +54,18 @@ $gold: gold;
     outline: none;
     cursor: pointer;
   }
-  .slick-dots .slick-active button {
+  .slick-dots li.slick-active button:before {
     background: $textColor;
+    opacity: 1;
+  }
+  .slick-dots li button:before {
+    opacity: 1;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #979797;
+    margin: 0 6px;
+    border-radius: 50%;
   }
 }
 
@@ -459,7 +467,8 @@ img {
   font-family: $avenirRegular-font;
   box-sizing: border-box;
   .slick-dots {
-    margin-top: 0;
+    max-width: 290px;
+    bottom: 0;
   }
   &__title {
     margin-bottom: 13px;
