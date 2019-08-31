@@ -6,18 +6,13 @@ $( document ).ready(function() {
     })
 
     //slider banner
-
-
         $('.banner').slick({
             dots: true,
             arrows: false,
             infinite: false
         });
- 
-
 
     //slider reviews
-
         if (screen.width < 768) {
             $('.reviews').slick({
                 dots: true,

@@ -100,95 +100,95 @@ img {
 }
 
 /**********Header**************/
-.page-header {
-  &__wrapper {
-    position: relative;
-  }
-  &__top-line {
-    padding: 20px 0;
-  }
-  &__logo {
-    display: block;
-    width: 268px;
-    margin: 0 auto;
-  }
-  &__phone {
-    display: none;
-  }
-  &__user-block {
-    display: flex;
-    position: absolute;
-    bottom: 11px;
-    right: 0;
-  }
-  &__user-block li{
-    padding-right: 20px;
-  }
-  &__user-link {
-    display: block;
-    width: 28px;
-    height: 28px;
-    &:hover {
-      opacity: 0.5;
+  .page-header {
+    &__wrapper {
+      position: relative;
     }
-  }
-  &__user-link--search {
-    background: url("../images/header/search.svg")no-repeat center;
-  }
-  &__user-link--shape {
-    background: url("../images/header/Shape.svg") no-repeat center;
-  }
-  &__user-link--cart {
-    width: 32px;
-    background: url("../images/header/cart.svg") no-repeat center bottom;
-    background-size: contain;
-  }
-  &__bars {
-    width: 20px;
-    height: 16px;
-    margin-left: 20px;
-    cursor: pointer;
-    background: url("../images/header/bars.svg") no-repeat;
-    &:hover {
-      background: url("../images/header/barsHover.svg") no-repeat;
+    &__top-line {
+      padding: 20px 0;
     }
-  }
-  &__navigation {
-    position: relative;
-    padding: 15px 0;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
-  }
-  &__navigation-list {
-    display: none;
-    position: absolute;
-    top: 46px;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    z-index: 2;
-  }
-  &__navigation-list li {
-    border-bottom: 1px solid rgba(102,51,153,0.4);
+    &__logo {
+      display: block;
+      width: 268px;
+      margin: 0 auto;
+    }
+    &__phone {
+      display: none;
+    }
+    &__user-block {
+      display: flex;
+      position: absolute;
+      bottom: 11px;
+      right: 0;
+    }
+    &__user-block li{
+      padding-right: 20px;
+    }
+    &__user-link {
+      display: block;
+      width: 28px;
+      height: 28px;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    &__user-link--search {
+      background: url("../images/header/search.svg")no-repeat center;
+    }
+    &__user-link--shape {
+      background: url("../images/header/Shape.svg") no-repeat center;
+    }
+    &__user-link--cart {
+      width: 32px;
+      background: url("../images/header/cart.svg") no-repeat center bottom;
+      background-size: contain;
+    }
+    &__bars {
+      width: 20px;
+      height: 16px;
+      margin-left: 20px;
+      cursor: pointer;
+      background: url("../images/header/bars.svg") no-repeat;
+      &:hover {
+        background: url("../images/header/barsHover.svg") no-repeat;
+      }
+    }
+    &__navigation {
+      position: relative;
+      padding: 15px 0;
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+    }
+    &__navigation-list {
+      display: none;
+      position: absolute;
+      top: 46px;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      z-index: 2;
+    }
+    &__navigation-list li {
+      border-bottom: 1px solid rgba(102,51,153,0.4);
 
-    &:first-child {
-      border-top: 1px solid rgba(102,51,153,0.4);
+      &:first-child {
+        border-top: 1px solid rgba(102,51,153,0.4);
+      }
+      &:hover {
+        background: rgba(102,51,153,0.1);
+      }
     }
-    &:hover {
-      background: rgba(102,51,153,0.1);
+    &__navigation-link {
+      @include font-regular;
+      display: block;
+      padding-left: 20px;
+      font-size: 16px;
+      line-height: 42px;
+      color: $textColor;
+    }
+    .show {
+      display: block;
     }
   }
-  &__navigation-link {
-    @include font-regular;
-    display: block;
-    padding-left: 20px;
-    font-size: 16px;
-    line-height: 42px;
-    color: $textColor;
-  }
-  .show {
-    display: block;
-  }
-}
 /**********Header tablet*********/
 
 @media (min-width: 768px) {
@@ -630,7 +630,6 @@ img {
   }
   &__form-button {
     @include font-bold;
-    width: 100%;
     padding-top: 7px;
     padding-bottom: 7px;
     height: 38px;
@@ -666,6 +665,11 @@ img {
   }
   .visible-desktop {
     display: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 767.5px) {
+  .page-footer__form-button {
+    width: 100%;
   }
 }
 /*******************Footer tablet********************/
@@ -728,7 +732,6 @@ img {
       position: absolute;
       top: 0;
       right: 0;
-      width: 167px;
       box-sizing: border-box;
     }
     &__company {
@@ -744,6 +747,11 @@ img {
       top: 20px;
       right: 20px;
     }
+  }
+}
+@media (min-width: 768px) and (max-width: 1449.5px) {
+  .page-footer__form-button {
+    width: 167px;
   }
 }
 /*******************Footer desktop********************/
