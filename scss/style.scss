@@ -7,7 +7,7 @@
 }
 
 /**variables**/
-$main-font: 'Roboto', sans-serif;
+$main-font: 'Open Sans', sans-serif;
 $avenirRegular-font: 'AvenirNextCyr-Regular';
 $textColor: #212212;
 $plum: plum;
@@ -178,12 +178,12 @@ img {
     }
   }
   &__navigation-link {
+    @include font-regular;
     display: block;
     padding-left: 20px;
     font-size: 16px;
     line-height: 42px;
     color: $textColor;
-    font-family: $avenirRegular-font;
   }
   .show {
     display: block;
@@ -200,10 +200,10 @@ img {
       padding: 20px;
     }
     &__phone {
+      @include font-regular;
       display: block;
       font-size: 17px;
       line-height: 23px;
-      font-family: $avenirRegular-font;
       color: $textColor;
       &:hover {
        color: rgba(102,51,153,0.9);
@@ -338,9 +338,9 @@ img {
 /************Custom-design**************/
 .custom-design {
   &__text-block {
+    @include font-regular;
     padding: 40px 15px;
     text-align: center;
-    font-family: $avenirRegular-font;
     color: $textColor;
   }
   &__title {
@@ -349,7 +349,7 @@ img {
     line-height: 27px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 400;
     span {
       color: #9E8B6B;
     }
@@ -360,11 +360,11 @@ img {
     line-height: 20px;
   }
   &__button {
+    @include font-regular;
     font-size: 14px;
     line-height: 19px;
     color: $textColor;
     text-decoration: underline;
-    font-family: $avenirRegular-font;
     &:hover {
       font-weight: bold;
     }
@@ -629,6 +629,7 @@ img {
     }
   }
   &__form-button {
+    @include font-bold;
     width: 100%;
     padding-top: 7px;
     padding-bottom: 7px;
